@@ -15,53 +15,61 @@ class Program
            
            Reto: mostrar un mensaje especial cuando obtenga 100.*/
         
+        // nombre del programa
         Console.WriteLine("\tSISTEMA DE CALIFICACION");
         
-        
+        // requerimiento de nombre de usuario
         Console.WriteLine("Cual es tu nombre? ");
-        string? nombre = Console.ReadLine(); //leer nombre
+        string? nombre = Console.ReadLine();
         
-        Console.WriteLine($"\nBienvenido/a al Sistema de Calificación {nombre}"); // escribir saludo y nombre
-        Console.WriteLine("\nInserta tu calificación para devolver el valor literal:");
-        decimal nota = 0m;
-        string respuesta = "N";
+        // saludo a usuario
+        Console.WriteLine($"\nBienvenido/a al Sistema de Calificación {nombre}");
         
-        while (respuesta == "S")
+        // variables
+        string respuesta = "";
+        
+        // Loop While
+        while (respuesta != "N")
         {
-
-            nota = decimal.Parse(Console.ReadLine());
-
-            if (nota >= 90)
+            // requerimiento de nota al usuario
+            Console.WriteLine("\nInserta tu calificación para devolver el valor literal:");
+            int nota = int.Parse(Console.ReadLine());
+            
+            // comparacion de notas para resultado
+            if (nota >= 90) // A
             {
                 Console.WriteLine($"Tu nota es {nota} = A");
                 Console.WriteLine($"Excelente! Felicidades {nombre}, aprobaste!");
             }
-            else if (nota >= 80 && nota < 90)
+            else if (nota >= 80 && nota < 90) // B
             {
                 Console.WriteLine($"Tu nota es {nota} = B");
                 Console.WriteLine($"Muy bien! {nombre}, aprobaste!");
             }
-            else if (nota >= 70 && nota < 80)
+            else if (nota >= 70 && nota < 80) // C
             {
                 Console.WriteLine($"Tu nota es {nota} = C");
                 Console.WriteLine($"Buen trabajo! {nombre}, aprobaste!");
             }
-            else if (nota >= 60 && nota < 70)
+            else if (nota >= 60 && nota < 70) // D
             {
                 Console.WriteLine($"Tu nota es {nota} = D");
                 Console.WriteLine($"Puedes hacerlo mejor {nombre}, apúrate más!");
             }
             else
             {
-                Console.WriteLine($"Tu nota es {nota} = F");
+                Console.WriteLine($"\nTu nota es {nota} = F"); // F
                 Console.WriteLine($"Lo siento {nombre}, reprobaste!");
             }
             
-            Console.WriteLine("Deseas saber otra calificación? S/N");
-            respuesta = Console.ReadLine();
+            // desicion para continuar o no
+            Console.WriteLine("\nDeseas saber otra calificación? S/N");
+            respuesta = Console.ReadLine().ToUpper();
 
            
         }
+        // mensaje final para cerrar programa
+        Console.WriteLine("Gracias por utilizar Sistema de Calificación!");
 
     }
 }
