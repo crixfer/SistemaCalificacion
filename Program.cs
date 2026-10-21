@@ -23,7 +23,7 @@ class Program
         string? nombre = Console.ReadLine();
         
         // saludo a usuario
-        Console.WriteLine($"\nBienvenido/a al Sistema de Calificación {nombre}");
+        Console.WriteLine($"\n*** Bienvenido/a al Sistema de Calificación {nombre} ***");
         
         // variables
         string respuesta = "";
@@ -38,28 +38,38 @@ class Program
             // comparacion de notas para resultado
             if (nota >= 90) // A
             {
+                Console.WriteLine("***************************************");
                 Console.WriteLine($"Tu nota es {nota} = A");
                 Console.WriteLine($"Excelente! Felicidades {nombre}, aprobaste!");
+                Console.WriteLine("***************************************");
             }
             else if (nota >= 80 && nota < 90) // B
             {
+                Console.WriteLine("***************************************");
                 Console.WriteLine($"Tu nota es {nota} = B");
                 Console.WriteLine($"Muy bien! {nombre}, aprobaste!");
+                Console.WriteLine("***************************************");
             }
             else if (nota >= 70 && nota < 80) // C
             {
+                Console.WriteLine("***************************************");
                 Console.WriteLine($"Tu nota es {nota} = C");
                 Console.WriteLine($"Buen trabajo! {nombre}, aprobaste!");
+                Console.WriteLine("***************************************");
             }
             else if (nota >= 60 && nota < 70) // D
             {
+                Console.WriteLine("***************************************");
                 Console.WriteLine($"Tu nota es {nota} = D");
                 Console.WriteLine($"Puedes hacerlo mejor {nombre}, apúrate más!");
+                Console.WriteLine("***************************************");
             }
             else
             {
+                Console.WriteLine("***************************************");
                 Console.WriteLine($"\nTu nota es {nota} = F"); // F
                 Console.WriteLine($"Lo siento {nombre}, reprobaste!");
+                Console.WriteLine("***************************************");
             }
             
             // desicion para continuar o no
